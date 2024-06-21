@@ -52,6 +52,7 @@ const sales = [
         QuickNotes:" "
     }
 ]
+
 const insertrows = function(sales){
     const tablebodyobj = document.getElementsByTagName("tbody")[0];
     console.log(tablebodyobj)
@@ -131,11 +132,15 @@ const getTableValues = function () {
     const finaltotal = document.getElementById('finaltotal');
     const cashPayment = document.getElementById('cashPayment');
     const onlinePayment = document.getElementById('onlinePayment');
-    const onlinetip = document.getElementById('onlinetip');
+    const onlinetip = document.getElementById('onlinetip')
+    const ordertotal = document.getElementById('ordertotal');
+    const deliveryfee = document.getElementById('deliveryfee');
     let sumcashpayemnt = 0
     let sumonlinepayment = 0
     let sumtip = 0
     let sumfinalpayment = 0
+    let sumordertotal = 0
+    let deliveryfeetotal = 0
     rows.forEach(row => {
         const cells = row.querySelectorAll('td');
         const rowData = [];
@@ -152,12 +157,16 @@ const getTableValues = function () {
         sumcashpayemnt += parseFloat( rowData[6]) || 0;
         sumonlinepayment += parseFloat( rowData[7]) || 0;
         sumtip += parseFloat( rowData[8]) || 0;
-        console.log("sumtip",sumtip)
+        sumordertotal += parseFloat( rowData[4]) || 0;
+        deliveryfeetotal += parseFloat( rowData[9]) || 0;
+        console.log("sumtip",deliveryfeetotal)
     });
     finaltotal.innerHTML = sumfinalpayment
     cashPayment.innerHTML = sumcashpayemnt
     onlinePayment.innerHTML = sumonlinepayment
     onlinetip.innerHTML = sumtip
+    ordertotal.innerHTML = sumordertotal 
+    deliveryfee.innerHTML = deliveryfeetotal
 };
 
 
