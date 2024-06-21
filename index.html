@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Top Div</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="top-div">
+       
+    </div>
+    <div class="heading-div">
+        NY, Upper 12, 12=> NY - Oss - Conn
+    </div>
+    <div class="columns-div">
+        <table id ='tab'>
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th>Order No</th>
+                    <th>Cus Name</th>
+                    <th>More Less</th>
+                    <th>Order Total</th>
+                    <th>Final Total</th>
+                    <th>Cash Payment</th>
+                    <th>Online Payment</th>
+                    <th>Online Tip</th>
+                    <th>Delivery Fee</th>
+                    <th>Quick Notes</th>
+                </tr>
+            </thead>
+            <tbody id = "tbody">
+                <!-- More rows as needed -->
+                <tr id="grandtotal">
+                    <td colspan="4"> Grand Total</td>
+                    <td id = "ordertotal"></td>
+                    <td id = "finaltotal"></td>
+                    <td id = "cashPayment"></td>
+                    <td id = "onlinePayment"></td>
+                    <td id = "onlinetip"></td>
+                    <td id = "deliveryfee"></td>
+                    <td id = "notes"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Item List</h2>
+            <ul id="itemList"></ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
